@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Employee;
+use App\Models\Unit;
 
 Route::get('/', function () {
     return view('welcome');
@@ -12,7 +14,9 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        $activeEmployees = Employee::count();
+        $activeUnits = Unit::count();
+        return view('dashboard', compact('activeEmployees', 'activeUnits'));
     })->name('dashboard');
     Route::get('/groups', function () {
         return view('groups'); // Nome do arquivo Blade onde está o layout
@@ -29,6 +33,9 @@ Route::middleware([
     Route::get('/employee-report', function () {
         return view('employee-report'); // Nome do arquivo Blade onde está o layout
     })->name('employee-report');
+    Route::get('/audit', function () {
+        return view('audit'); // Nome do arquivo Blade onde está o layout
+    })->name('audit');
 })
 
 ;

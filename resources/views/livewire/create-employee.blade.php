@@ -25,7 +25,7 @@
                 {{ __('Cancel') }}
             </x-secondary-button>
             <x-button class="ms-3" dusk="confirm-password-button" wire:click="saveEmployee" wire:loading.attr="disabled">
-                Criar Unidade
+                Criar Colaborador
             </x-button>
         </x-slot>
     </x-dialog-modal>
