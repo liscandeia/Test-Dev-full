@@ -4,11 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
-class Flag extends Model
+use OwenIt\Auditing\Contracts\Auditable;
+class Flag extends Model implements Auditable
 {
     /** @use HasFactory<\Database\Factories\FlagFactory> */
     use HasFactory;
+    use \OwenIt\Auditing\Auditable;
+
     protected $fillable = ['name', 'group_id'];
 
     public function group()
