@@ -26,6 +26,9 @@ Route::middleware([
     Route::get('/employee', function () {
         return view('employee'); // Nome do arquivo Blade onde está o layout
     })->name('employee');
+    Route::get('/employee-report', function () {
+        return view('employee-report'); // Nome do arquivo Blade onde está o layout
+    })->name('employee-report');
 })
 
 ;

@@ -2,7 +2,7 @@
     <x-dialog-modal wire:model.live="showForm">
         <x-slot name="title">
             <x-validation-errors />
-            Editar Funcionário
+            Editar Colaborador
         </x-slot>
         <x-slot name="content">
             <div class="flex flex-col space-y-4">
@@ -23,7 +23,7 @@
             </x-secondary-button>
 
             <x-button class="ms-3" dusk="confirm-password-button" wire:click="UpdateEmployeeAndSave" wire:loading.attr="disabled">
-                Editar Funcionário
+                Editar Colaborador
             </x-button>
         </x-slot>
     </x-dialog-modal>

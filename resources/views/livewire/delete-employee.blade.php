@@ -4,7 +4,7 @@
             Excluir
         </x-slot>
         <x-slot name="content">
-            Tem certeza de que deseja excluir o funcionário "{{ $employeeName }} "?
+            Tem certeza de que deseja excluir o colaborador "{{ $employeeName }} "?
         </x-slot>
         <x-slot name="footer">
             <x-secondary-button @click="$wire.set('showForm', false)" wire:loading.attr="disabled">

@@ -1,11 +1,11 @@
 <div>
     <x-button @click="$wire.set('showForm',true)" class="m-4 bg-green-900">
-        <i class="fa-solid fa-plus"></i>&nbsp Criar Funcionário
+        <i class="fa-solid fa-plus"></i>&nbsp Criar Colaborador
     </x-button>
     <x-dialog-modal wire:model.live="showForm">
         <x-slot name="title">
             <x-validation-errors />
-            Criar Funcionário
+            Criar Colaborador
         </x-slot>
         <x-slot name="content">
             <div class="flex flex-col space-y-4">

@@ -17,8 +17,9 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
                         <div class="bg-white p-6 rounded-lg shadow-lg">
                             <h3 class="text-xl font-semibold text-gray-700">Relatório</h3>
-                            <x-button class="mt-4 bg-yellow-600">Ver Mais</x-button>
-                        </div>
+                            <a href="{{ route('employee-report') }}" class="mt-4 bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700">
+                                {{ __('Ver Mais') }}
+                            </a>                        </div>
                         <div class="bg-white p-6 rounded-lg shadow-lg">
                             <h3 class="text-xl font-semibold text-gray-700">Auditoria:</h3>
                             <x-button class="mt-4 bg-yellow-600">Ver Mais</x-button>
